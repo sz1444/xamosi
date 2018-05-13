@@ -88,8 +88,11 @@ a {
     width: 100%;
     text-align: center;
     left: 0;
-    font-size: 80px
+    font-size: 4em;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
+
 
 /*
 h2 {
