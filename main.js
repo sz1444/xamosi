@@ -24,12 +24,12 @@ window.addEventListener('resize', boxedLocked);
 
 
 
-function menu(){
-    if(menuUl.style.display == 'block'){
-           menuUl.style.display = 'none';
- 
-    }else{
-    menuUl.style.display = 'block';
+function menu() {
+    if (menuUl.style.display == 'block') {
+        menuUl.style.display = 'none';
+
+    } else {
+        menuUl.style.display = 'block';
     }
 }
 
@@ -52,7 +52,6 @@ onload = function height() {
             heightBox = box[i].offsetHeight;
         }
         for (var i = 0; i < box.length; i++) {
-
             box[i].style.height = heightBox + "px";
         }
     }
@@ -61,23 +60,22 @@ onload = function height() {
 
 function layoutSetting() {
     if (this.classList == 'wide') {
-        nav.style.width = 100 + '%';
-        body.style.width = 100 + '%';
+        nav.style.width = '100%';
+        body.style.width = '100%';
     } else {
-        nav.style.width = 90 + '%';
-        body.style.width = 90 + '%';
+        nav.style.width = '90%';
+        body.style.width = '90%';
     }
 }
 
 function bgChange() {
     var html = document.querySelector('html');
     var y = this.firstChild.src;
-    if (body.style.width == 100 + '%') {
+    if (body.style.width == '100%') {
         alert('Select Boxed Layout!');
     } else {
         html.style.backgroundImage = 'url(' + y + ')';
     }
-
 }
 
 function popup() {
@@ -95,8 +93,10 @@ function boxedLocked() {
         nav.style.width = 100 + '%';
         body.style.width = 100 + '%';
     }
-    
-    if(window.innerWidth>999){
-        menuUl.style.display='block';
+
+    if (window.innerWidth > 999) {
+        menuUl.style.display = 'block';
+    } else {
+        menuUl.style.display = 'none';
     }
 }
