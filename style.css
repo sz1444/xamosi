@@ -9,6 +9,7 @@ html {
     -webkit-background-size: 100%;
     background-size: 100%;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 body {
@@ -79,6 +80,17 @@ a {
     text-decoration: none;
     color: #555;
 }
+
+.content-header {
+    position: absolute;
+    top: 40vh;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    font-size: 80px
+}
+
 /*
 h2 {
     color: #fff;
@@ -135,12 +147,12 @@ header {
     background-color: #000;
     background-image: url(img/bg.jpg);
     -webkit-background-size: 100%;
-    background-size:cover;
+    background-size: cover;
     background-position: 0 0;
 }
 
 nav {
-    box-shadow: 0px 1px 3px #cccc;
+    box-shadow: 0px 1px 3px #ccc;
     text-align: right;
     position: fixed;
     width: 100%;
@@ -697,7 +709,7 @@ h1 {
     color: #fff;
 }
 
-.icon-box .back  {
+.icon-box .back {
     color: #0d0d0d;
     text-transform: uppercase;
 }
@@ -932,13 +944,13 @@ footer {
 
 
 @media(max-width:1000px) {
-    .fa-bars{
+    .fa-bars {
         display: block;
     }
-        
+
     nav {
         position: absolute;
-        top
+        top: 0;
     }
     nav ul {
         position: absolute;
@@ -976,11 +988,11 @@ footer {
     }
 
     nav ul li ol {
-        display:block;
+        display: block;
         position: relative;
         z-index: 1;
-        left: 170px;
-        padding-left: 200px;
+        padding: 0;
+        margin: 0 auto;
         background-color: #fff;
         margin-bottom: -4px;
 
@@ -997,11 +1009,9 @@ footer {
         line-height: 0px;
         border: 0;
         margin: 0;
-        padding-left: 120px;
-
+        padding-left: 60px;
+        box-sizing: border-box;
     }
-
-
 
 
     .gallery li {
@@ -1017,6 +1027,7 @@ footer {
     }
     .content-box ul li {
         width: 100%;
+        margin-left: 0;
         display: block;
         position: relative;
     }
@@ -1050,7 +1061,8 @@ footer {
 
 
     .blog ul li {
-        width: 77%;
+        width: 100%;
+        margin-left: 0;
     }
 
     .reviews .col-5 {
@@ -1073,4 +1085,18 @@ footer {
         border-bottom: 2px solid #ddd;
         border-top: 2px solid #ddd;
     }
+}
+
+@media(max-width:600px) {
+    .container {
+        padding: 0 15px;
+    }
+    .gallery li img {
+        width: 100%;
+    }
+    .gallery li {
+        width: 100%;
+        margin-left: 0;
+    }
+
 }
