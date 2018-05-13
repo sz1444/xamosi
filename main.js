@@ -94,9 +94,6 @@ function boxedLocked() {
         body.style.width = 100 + '%';
     }
 
-    if (window.innerWidth > 999) {
-        menuUl.style.display = 'block';
-    } else {
-        menuUl.style.display = 'none';
-    }
+munuUl.style.display = window.innerWidth > 999 ? 'block' : 'none';
+
 }
